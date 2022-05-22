@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-fluent-python-charp5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/05/22/fluent-python-charp5/" class="article-date">
+  <time class="dt-published" datetime="2022-05-22T13:15:19.000Z" itemprop="datePublished">2022-05-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/05/22/fluent-python-charp5/">fluent python charp5</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="第五章：一等函数"><a href="#第五章：一等函数" class="headerlink" title="第五章：一等函数"></a>第五章：一等函数</h1><h2 id="5-1-把函数视为对象"><a href="#5-1-把函数视为对象" class="headerlink" title="5.1 把函数视为对象"></a>5.1 把函数视为对象</h2><p><code>map(function,iterable,...)</code>返回迭代器</p>
+<h2 id="5-2-高阶函数"><a href="#5-2-高阶函数" class="headerlink" title="5.2 高阶函数"></a>5.2 高阶函数</h2><p>接受函数为参数，或者把函数作为结果返回的函数</p>
+<p><code>map filter reduce</code></p>
+<h3 id="map-filter-reduce的替代品"><a href="#map-filter-reduce的替代品" class="headerlink" title="map filter reduce的替代品"></a>map filter reduce的替代品</h3><p><code>filter(function, iterable)</code>判断函数，可迭代对象，用于过滤序列，过滤掉不符合条件的元素，返回由符合条件元素组成的新列表。</p>
+<p>map和filter返回生成器（迭代器），直接替代品为生成器表达式</p>
+<p><code>reduce(function,iterable,initializer)</code>函数，可迭代对象，可选初始矩阵。对参数序列中元素进行累积。</p>
+<p><code>all和any也是内置规约函数</code></p>
+<p>all(iterable)：iterable每个元素都是真值则返回True；all([])返回True</p>
+<p>any(iterable)：只要iterable中铀元素是真值则返回True，any([])返回False</p>
+<h2 id="5-3-匿名函数"><a href="#5-3-匿名函数" class="headerlink" title="5.3 匿名函数"></a>5.3 匿名函数</h2><p><img src="/5.3.png"></p>
+<h2 id="5-4-可调用对象"><a href="#5-4-可调用对象" class="headerlink" title="5.4 可调用对象"></a>5.4 可调用对象</h2><p>调用运算符：<code>（）</code></p>
+<p>判断对象能否调用：callable()</p>
+<h2 id="5-5-用户定义的可调用类型"><a href="#5-5-用户定义的可调用类型" class="headerlink" title="5.5 用户定义的可调用类型"></a>5.5 用户定义的可调用类型</h2><p><img src="/5.5.png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">__call__</span>(<span class="params">self</span>):</span><br><span class="line">	<span class="keyword">return</span> self.pick()</span><br><span class="line">	&gt;&gt;&gt;bingo()<span class="comment">#快捷调用</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-6-函数内省"><a href="#5-6-函数内省" class="headerlink" title="5.6 函数内省"></a>5.6 函数内省</h2><p><code>__dict__</code>存储赋予它的用户属性</p>
+<p><img src="/5.6.png"></p>
+<h2 id="5-7-从定位参数到仅限关键字参数"><a href="#5-7-从定位参数到仅限关键字参数" class="headerlink" title="5.7 从定位参数到仅限关键字参数"></a>5.7 从定位参数到仅限关键字参数</h2><p>python调用函数时使用*和**展开可迭代对象。</p>
+<p><img src="/5.7.1.png"></p>
+<p><img src="/5.7.2.png"></p>
+<p>任意个参数被*content 捕获，存入元组，关键字参数被**attrs捕获，存入字典。</p>
+<p>定义函数时若想指定关键字参数，要把它们放到前面有*的参数后面，若不想支持数量不定的定位参数，但是想支持仅限关键字参数，要在签名中放一个 *。</p>
+<p><img src="/5.7.3.png"></p>
+<h2 id="5-8获取关于参数的信息"><a href="#5-8获取关于参数的信息" class="headerlink" title="5.8获取关于参数的信息"></a>5.8获取关于参数的信息</h2><p><code>.rfind()  .find()  .rstrip()</code></p>
+<p><code>获取信息：.__code__.co_varnames    __code__.co_argcount</code></p>
+<p><img src="/5.8.png"></p>
+<p><img src="/5.8.2.png"></p>
+<p><code>inspect模块</code></p>
+<p><img src="/5.8.3.png"></p>
+<p>inspect.signature函数返回一个inspect.Singnature对象，它有一个parameters属性。</p>
+<p><code>inspect.Signature对象的bind方法</code></p>
+<p><img src="/5.8.4.png"></p>
+<h2 id="5-9-函数注解"><a href="#5-9-函数注解" class="headerlink" title="5.9 函数注解"></a>5.9 函数注解</h2><p>函数声明中各个参数可以在：之后增加注解表达式，若参数有默认值，注解放在参数名和&#x3D;之间，若想注解返回值，在）和函数声明末尾的：之间添加-&gt;和一个表达式。</p>
+<p><img src="/5.9.png"></p>
+<p><img src="/5.9.2.png"></p>
+<p><code>ljust()方法返回一个原字符串左对齐，并使用空格填充至指定长度的新字符串。</code></p>
+<p><code>str.ljust(width[, fillchar])</code></p>
+<h2 id="5-10-支持函数式编程的包"><a href="#5-10-支持函数式编程的包" class="headerlink" title="5.10 支持函数式编程的包"></a>5.10 支持函数式编程的包</h2><h3 id="5-10-1-operator模块"><a href="#5-10-1-operator模块" class="headerlink" title="5.10.1 operator模块"></a>5.10.1 operator模块</h3><p><img src="/5.10.1.png"></p>
+<p><code>itemgetter</code> 接受集合的函数</p>
+<p><img src="/5.10.1.1.png"></p>
+<hr>
+<p><code>attrgetter</code> 根据名称提取对象属性</p>
+<p><img src="/5.10.1.2.png"></p>
+<hr>
+<p><code>str.startswith(str, beg=0, end=len(string))</code></p>
+<p><code>methodcaller</code>自行创建函数</p>
+<p><img src="/5.10.1.3.png"></p>
+<h2 id="5-10-2-使用functools-partial-冻结参数"><a href="#5-10-2-使用functools-partial-冻结参数" class="headerlink" title="5.10.2 使用functools.partial 冻结参数"></a>5.10.2 使用functools.partial 冻结参数</h2><p><code>partial</code>  <code>partialmethod</code></p>
+<p>部分应用一个函数</p>
+<p><img src="/5.10.2.png"></p>
+<p><img src="/5.10.2.1.png"></p>
+<p>partial第一个参数时一个可调用对象，后面跟着任意个要绑定的定位参数和关键字参数。</p>
+<p><code>attrgetter</code> 根据名称提取对象属性</p>
+<p><img src="/5.10.1.2.png"></p>
+<p><img src="/5.10.1.3.png"></p>
+<hr>
+<p><img src="/5.10.2.png"></p>
+<p><img src="/5.10.2.1.png"></p>
+<p><img src="/5.10.2.2.png"></p>
+<p><code>functools.partialmethod</code>作用与partial一样，不过是用于处理方法的。</p>
+<p><code>functools.lru_cache</code>做备忘</p>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p><em>《Python Cookbook》第七章</em></p>
+<p><a target="_blank" rel="noopener" href="https://docs.python.org/3/reference/datamodel.html#the-standard-type-hierarchy">3. Data model — Python 3.10.4 documentation</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/kachayev/fn.py">kachayev&#x2F;fn.py: Functional programming in Python: implementation of missing features to enjoy FP (github.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://bobo.readthedocs.io/en/latest/">Introduction — bobo 2.2.0 documentation</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/05/22/fluent-python-charp5/" data-id="cl3heq5vy0000y0v5dzyh6e1d" data-title="fluent python charp5" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/05/22/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2022-05-22T13:13:38.152Z" itemprop="datePublished">2022-05-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/05/22/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/05/22/hello-world/" data-id="cl3heq5w40001y0v5133a3p1q" data-title="Hello World" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/05/22/fluent-python-charp5/">fluent python charp5</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/22/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
