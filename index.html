@@ -71,6 +71,70 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-fluent-python-charp6" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/05/27/fluent-python-charp6/" class="article-date">
+  <time class="dt-published" datetime="2022-05-27T13:11:02.000Z" itemprop="datePublished">2022-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/05/27/fluent-python-charp6/">fluent python charp6</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="使用一等函数实现设计模式"><a href="#使用一等函数实现设计模式" class="headerlink" title="使用一等函数实现设计模式"></a>使用一等函数实现设计模式</h1><h2 id="6-1-案例分析：重构策略模式"><a href="#6-1-案例分析：重构策略模式" class="headerlink" title="6.1 案例分析：重构策略模式"></a>6.1 案例分析：重构策略模式</h2><p><img src="https://raw.githubusercontent.com/CZC-123/czc-s-fluent_python/main/charp6/6.3kkt4mayj860.webp" alt="6"></p>
+<p><code>hasattr()</code>判断对象是否含有对应属性</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">hasattr</span>(<span class="built_in">object</span>,name)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/CZC-123/czc-s-fluent_python/main/charp6/6.448v3g92lso0.webp" alt="6"></p>
+<p><img src="https://raw.githubusercontent.com/CZC-123/czc-s-fluent_python/main/charp6/6.6iwp1ose1m80.webp" alt="6"></p>
+<p>声明抽象基类的最简单方式是子类化 <code>abc.ABC</code></p>
+<p><img src="https://raw.githubusercontent.com/CZC-123/czc-s-fluent_python/main/charp6/6.1.4.4lfpk7np2vm0.webp" alt="6"></p>
+<h3 id="6-1-2使用函数实现“策略”模式"><a href="#6-1-2使用函数实现“策略”模式" class="headerlink" title="6.1.2使用函数实现“策略”模式"></a>6.1.2使用函数实现“策略”模式</h3><p><img src="https://raw.githubusercontent.com/CZC-123/czc-s-fluent_python/main/charp6/6.1.2.1.22pk6hd3ro1s.webp" alt="6"></p>
+<p><img src="https://raw.githubusercontent.com/CZC-123/czc-s-fluent_python/main/charp6/6.1.2.2.5hatd4tcin80.webp" alt="6"></p>
+<p><img src="https://raw.githubusercontent.com/CZC-123/czc-s-fluent_python/main/charp6/6.1.2.3.4dbylpklbk80.webp" alt="6"></p>
+<p><em>享元</em>：可共享的对象，可以同时再多个上下文中使用。</p>
+<p><em>策略</em>：由上下文类的客户选择，仅处理上下文中的数据。</p>
+<h3 id="6-1-3-选择最佳策略：简单的方式"><a href="#6-1-3-选择最佳策略：简单的方式" class="headerlink" title="6.1.3 选择最佳策略：简单的方式"></a>6.1.3 选择最佳策略：简单的方式</h3><p><img src="https://raw.githubusercontent.com/CZC-123/czc-s-fluent_python/main/charp6/6.1.3.1.7hganrsmt940.webp" alt="6"></p>
+<p><img src="https://raw.githubusercontent.com/CZC-123/czc-s-fluent_python/main/charp6/6.1.3.2.5dc536plp440.webp" alt="6"></p>
+<h3 id="6-1-4-找出模块中的全部策略"><a href="#6-1-4-找出模块中的全部策略" class="headerlink" title="6.1.4 找出模块中的全部策略"></a>6.1.4 找出模块中的全部策略</h3><p><code>globals()</code> 返回一个字典，表示当前的全局符号表。这个符号标始终针对当前模块。</p>
+<p><img src="https://raw.githubusercontent.com/CZC-123/czc-s-fluent_python/main/charp6/6.1.4.1.1bwbg12k5jj4.webp" alt="6"></p>
+<p>或采用一个单独的模块保存所有的策略函数，把best_promo排除在外</p>
+<p><code>inspect模块</code></p>
+<p><code>inspect.getmembers(object[,predicte])</code></p>
+<p>返回一个列表，包含是key:对象的属性，和value:具体函数</p>
+<p>第二次参数为可选判断条件</p>
+<p><img src="https://raw.githubusercontent.com/CZC-123/czc-s-fluent_python/main/charp6/6.1.4.2.6ycbt8wtgko0.webp" alt="6"></p>
+<h3 id="链接（推荐）"><a href="#链接（推荐）" class="headerlink" title="链接（推荐）"></a>链接（推荐）</h3><p>《设计模式：可复用面向对象软件的基础》</p>
+<p><strong>模块内省</strong></p>
+<p><strong>装饰器</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/05/27/fluent-python-charp6/" data-id="cl3ol4t130001ccv55klz518h" data-title="fluent python charp6" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-fluent-python-charp5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/05/22/fluent-python-charp5/" class="article-date">
@@ -162,7 +226,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/22/fluent-python-charp5/" data-id="cl3hgamy80000pgv5go2vfd0d" data-title="fluent python charp5" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/05/22/fluent-python-charp5/" data-id="cl3ol4t0y0000ccv591zfdvw4" data-title="fluent python charp5" class="article-share-link">Share</a>
       
       
       
@@ -213,7 +277,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/22/hello-world/" data-id="cl3hgamyf0001pgv57eb5gcid" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/05/22/hello-world/" data-id="cl3ol4t150002ccv5gxl14ogq" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -254,6 +318,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/05/27/fluent-python-charp6/">fluent python charp6</a>
+          </li>
         
           <li>
             <a href="/2022/05/22/fluent-python-charp5/">fluent python charp5</a>
